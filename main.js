@@ -12,4 +12,5 @@ var app = http.createServer(function(request,response){
     response.end(fs.readFileSync(__dirname + url));
  
 });
-app.listen(3000);
+console.log("포트번호 : "+process.env.PORT);
+app.listen(process.env.PORT || 3000);
